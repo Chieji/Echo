@@ -50,4 +50,5 @@ export interface Tool {
 export interface Provider {
     name: string;
     generateResponse(messages: Message[], tools?: ToolDefinition[]): Promise<Message>;
+    embedText(text: string): Promise<number[]>;
 }
